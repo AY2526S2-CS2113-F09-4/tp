@@ -1,7 +1,7 @@
 package seedu.duke.command;
+
 import seedu.duke.model.Activity;
 import seedu.duke.model.ActivityList;
-
 
 public class AddActivityCommand extends ActivityCommand{
     private final String name;

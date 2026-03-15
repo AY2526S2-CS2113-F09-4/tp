@@ -8,7 +8,6 @@ public class Activity {
     private String end;
 
 
-
     public Activity(String name, String location, String date, String start, String end) {
         this.name = name;
         this.location = location;
@@ -38,7 +37,7 @@ public class Activity {
     }
 
     public void setDate(String date) {
-        this.start = date;
+        this.date = date;
     }
 
     public String getStart() {
