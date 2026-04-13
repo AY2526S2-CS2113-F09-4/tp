@@ -5,6 +5,7 @@ import seedu.traveltrio.TravelTrioException;
 import seedu.traveltrio.model.activity.Activity;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
@@ -80,7 +81,7 @@ class BudgetTest {
         Budget b = new Budget(100.00, a);
         b.setActualExpense(50.00);
         String result = b.toString();
-        assertTrue(!result.contains("Warning"));
+        assertFalse(result.contains("Warning"));
     }
 }
 

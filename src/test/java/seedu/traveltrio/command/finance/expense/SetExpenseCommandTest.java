@@ -9,6 +9,7 @@ import seedu.traveltrio.model.budget.Budget;
 import seedu.traveltrio.model.budget.BudgetList;
 import seedu.traveltrio.model.trip.Trip;
 
+import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
@@ -56,7 +57,7 @@ public class SetExpenseCommandTest {
     public void execute_lowExpense_noWarning() throws TravelTrioException {
         SetExpenseCommand cmd = new SetExpenseCommand(budgetList, activityList, activity, 50.0, false);
         String result = cmd.execute();
-        assertTrue(!result.contains("Warning"));
+        assertFalse(result.contains("Warning"));
     }
 
     @Test
